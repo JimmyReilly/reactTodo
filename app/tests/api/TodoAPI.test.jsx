@@ -47,6 +47,9 @@ describe('TodoAPI', () =>{
                 completed: false
             }];
             localStorage.setItem('todos', JSON.stringify(todos));
+            var actualTodos = TodoAPI.getTodos();
+
+            expect(actualTodos).toEqual(todos);
         });
     });
 });
