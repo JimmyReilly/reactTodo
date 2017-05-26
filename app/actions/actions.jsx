@@ -7,7 +7,7 @@ export var setSearchText = (searchText) => {
 
 export var toggleShowCompleted = () => {
     return {
-        type: 'TOGGLE_SHOW_COMPELTED'
+        type: 'TOGGLE_SHOW_COMPLETED'
     };
 };
 
