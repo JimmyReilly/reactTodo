@@ -24,10 +24,10 @@ firebaseRef.set({
     }
 });
 
-// firebaseRef.update({
-//     'app/name': 'Todo Application',
-//     'user/name': 'Jen'
-// });
+firebaseRef.child('user').on('value', (snapshot) => {
+    console.log('User ref changed', snapshot.val());
+});
 
-firebaseRef.child('app').update({ name: 'Todo Application' });
-firebaseRef.child('user').update({ name: 'Jen' });
+firebaseRef.child('user').update({name: 'Mike'});
+
+firebaseRef.child('app').update({name: 'Something Else!'});
