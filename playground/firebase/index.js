@@ -22,20 +22,12 @@ firebaseRef.set({
         name: "Jimmy",
         age: 25
     }
-}).then(() =>{
-    console.log('Set worked!');
-}, (e) => {
-    console.log('Set failed');
 });
 
-// firebaseRef.set({
-//     appName: 'Todo Application'
+// firebaseRef.update({
+//     'app/name': 'Todo Application',
+//     'user/name': 'Jen'
 // });
 
-firebaseRef.child('user').set({
-    name: 'Mike'
-});
-
-firebaseRef.child('app').set({
-    name: 'Todo App'
-});
+firebaseRef.child('app').update({ name: 'Todo Application' });
+firebaseRef.child('user').update({ name: 'Jen' });
