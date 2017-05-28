@@ -2,12 +2,12 @@ import firebase from 'firebase';
 
 try {
     var config = {
-        apiKey: "AIzaSyBWEfpoqCRjSLXEZTQldmGsCOPfZeVrRy4",
-        authDomain: "reilly-todo-app.firebaseapp.com",
-        databaseURL: "https://reilly-todo-app.firebaseio.com",
-        projectId: "reilly-todo-app",
-        storageBucket: "reilly-todo-app.appspot.com",
-        messagingSenderId: "991850785663"
+        apiKey: process.env.API_KEY,
+        authDomain: process.env.AUTH_DOMAIN,
+        databaseURL: process.env.DATABASE_URL,
+        projectId: process.env.PROJECT_ID,
+        storageBucket: process.env.STORAGE_BUCKET,
+        messagingSenderId: process.env.MESSAGING_SENDER_ID
     };
     firebase.initializeApp(config);
 }
